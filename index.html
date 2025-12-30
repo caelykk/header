@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <title>Канцпарк</title>
 </head>
 <body>
@@ -11,11 +15,8 @@
       <div class="container">
         <div class="header__top-wr">
           <div class="header__top-city-location">
-            <svg width="12" height="16"
-                viewBox="0 0 12 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.59961 0.5C8.41934 0.5 10.7 2.77993 10.7002 5.59961C10.7002 6.54829 10.3812 7.64896 9.86914 8.79199C9.35991 9.92867 8.67591 11.0722 7.98535 12.0957C7.29588 13.1176 6.6054 14.0115 6.08691 14.6504C5.89986 14.8809 5.73313 15.0761 5.59961 15.2334C5.46615 15.0761 5.30018 14.8807 5.11328 14.6504C4.5948 14.0115 3.90433 13.1176 3.21484 12.0957C2.52428 11.0722 1.84028 9.92867 1.33105 8.79199C0.819013 7.64894 0.5 6.54831 0.5 5.59961C0.500211 2.78006 2.78006 0.500211 5.59961 0.5ZM5.59961 3.09961C4.93671 3.09971 4.30078 3.36328 3.83203 3.83203C3.36328 4.30078 3.09971 4.93671 3.09961 5.59961C3.09961 6.26265 3.36319 6.89932 3.83203 7.36816C4.30077 7.83685 4.93676 8.09951 5.59961 8.09961C6.26265 8.09961 6.89932 7.837 7.36816 7.36816C7.83701 6.89932 8.09961 6.26265 8.09961 5.59961C8.09951 4.93675 7.83685 4.30077 7.36816 3.83203C6.89932 3.36319 6.26265 3.09961 5.59961 3.09961Z" stroke="#1D1D1B"/>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.59961 2.5C12.4193 2.5 14.7 4.77993 14.7002 7.59961C14.7002 8.54829 14.3812 9.64896 13.8691 10.792C13.3599 11.9287 12.6759 13.0722 11.9854 14.0957C11.2959 15.1176 10.6054 16.0115 10.0869 16.6504C9.89986 16.8809 9.73313 17.0761 9.59961 17.2334C9.46615 17.0761 9.30018 16.8807 9.11328 16.6504C8.5948 16.0115 7.90433 15.1176 7.21484 14.0957C6.52428 13.0722 5.84028 11.9287 5.33105 10.792C4.81901 9.64894 4.5 8.54831 4.5 7.59961C4.50021 4.78006 6.78006 2.50021 9.59961 2.5ZM9.59961 5.09961C8.93671 5.09971 8.30078 5.36328 7.83203 5.83203C7.36328 6.30078 7.09971 6.93671 7.09961 7.59961C7.09961 8.26265 7.36319 8.89932 7.83203 9.36816C8.30077 9.83685 8.93676 10.0995 9.59961 10.0996C10.2627 10.0996 10.8993 9.837 11.3682 9.36816C11.837 8.89932 12.0996 8.26265 12.0996 7.59961C12.0995 6.93675 11.8369 6.30077 11.3682 5.83203C10.8993 5.36319 10.2627 5.09961 9.59961 5.09961Z" stroke="#1D1D1B"/>
             </svg>
             <div class="header__top-city-selector">
               <p class="header__top-city-selected">Владикавказ</p>
@@ -23,7 +24,7 @@
           </div>
           <div class="header__top-nav">
             <ul class="header__top-nav-items">
-              <li class="header__top-nav-item-shops">
+              <li class="header__top-nav-item">
                 <a href="#">Магазины</a>
 
               </li>
@@ -63,7 +64,7 @@
             <form action="#">
               <div class="header-search">
                 <label class="header-search__input">
-                  <input type="text" class="header-search__input-input">
+                  <input type="text" class="header-search__input-input" placeholder="Быстрый поиск">
                 </label>
               </div>
             </form>
