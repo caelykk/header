@@ -1,11 +1,16 @@
-*
+html
 {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body
+*, *::before, *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* body
 {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -13,28 +18,13 @@ body
     font-style: normal;
     font-size: 12px;
 
-}
+} */
 
 a
 {
-    text-align: center;
     background: transparent;
     text-decoration: none;
     color: #1D1D1B;
-}
-
-ul
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-button
-{
-    /* background-color: #F8F8F8; */
-    cursor: pointer;
-    border: none;
 }
 
 .container
