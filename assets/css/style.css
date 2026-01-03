@@ -42,12 +42,16 @@ a
 {
     display: flex;
     flex-direction: column;
+    gap: 28px;
 }
+
+
 .header__top
 {
     background-color: #F8F8F8;
     height: auto;
     padding: 8px 0;
+    margin-bottom: 6px;
 }
 
 .header__top-wr
@@ -83,11 +87,15 @@ a
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 24px;
+
 }
 
-.header__top-nav-item:not(:last-child)
+.header__top-nav-item
 {
-    margin-right: 24px;
+    display: flex;
+    gap: 9px;
+
 }
 
 .header__top-communication
