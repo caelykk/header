@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-html
-{
-    box-sizing: border-box;
-
-}
+html {box-sizing: border-box;}
 
 *, *::before, *::after
 {
@@ -19,8 +15,6 @@ body
     font-weight: 400;
     font-size: 12px;
     font-style: normal;
-    font-optical-sizing: auto;
-
 }
 
 a
@@ -37,20 +31,19 @@ a
     width: 100%;
 }
 
+.g-button {border: none;}
+
+.g-button--red
+{
+    border-radius: 3px;
+    background-color: #E0001B;
+}
+
 .header-wr
 {
     display: flex;
     flex-direction: column;
     gap: 28px;
-}
-
-.g-button-red
-{
-    border-radius: 3px;
-    background-color: #E0001B;
-    /* font-size: 16px; */
-    /* font-weight: 500; */
-    border: none;
 }
 
 .header__top
@@ -65,7 +58,9 @@ a
 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 99px;
+    flex-wrap: wrap;
 }
 
 .header__top-city-location
@@ -75,10 +70,21 @@ a
     position: relative;
 }
 
+.header__top-city-selector
+{
+    cursor: pointer;
+}
+
 .header__top-city-selected
 {
     margin-left: 8px;
     letter-spacing: 0;
+}
+
+.header__top-nav
+{
+    display: flex;
+    flex: 1;
 }
 
 .header__top-nav-items
@@ -87,31 +93,29 @@ a
     align-items: center;
     justify-content: center;
     gap: 24px;
-
+    flex-wrap: wrap;
 }
 
-.header__top-nav-item
+.header__top-nav-item-link
 {
     display: flex;
     gap: 9px;
-
 }
 
 .header__top-contacts
 {
-    margin-left: 245px;
+    margin-right: 20px;
+    white-space: nowrap;
 }
 
-.header__top-contacts-link
-{
-    color: #696969;
-}
+.header__top-contacts-link {color: #696969;}
 
 .header__middle-wr
 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header__middle-search
@@ -123,15 +127,9 @@ a
     max-width: 412px;
 }
 
-.header__middle-search-form
-{
-    flex: 1;
-}
+.header__middle-search-form {flex: 1;}
 
-.header-search__input
-{
-    display: flex;
-}
+.header-search__input {display: flex;}
 
 .header-search__input-input
 {
@@ -170,6 +168,7 @@ a
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header__middle-nav-btn
@@ -181,20 +180,11 @@ a
     padding: 11px 16px 13px 16px;
 }
 
-.header__middle-nav-favorites
-{
-    gap: 15px;
-}
+.header__middle-nav-btn:first-child {gap: 15px;}
 
-.header__middle-nav-compare
-{
-    gap: 13px;
-}
+.header__middle-nav-btn:not(:last-child):not(:first-child) {gap: 13px;}
 
-.header__middle-nav-cart
-{
-    gap: 14px;
-}
+.header__middle-nav-btn:last-child {gap: 14px;}
 
 .header__middle-nav-btn-status
 {
@@ -213,22 +203,21 @@ a
     border-radius: 3px;
 }
 
-
-
 .header__bottom-wr
 {
     display: flex;
     align-items: center;
 }
 
-
-.header__bottom-nav-btn--catalog
+.header__bottom-catalog-btn
 {
     display: flex;
+    align-items: center;
     color: #ffffff;
     padding: 16px;
     font-size: 16px;
     font-weight: 600;
+    line-height: 100%;
     gap: 16px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -238,10 +227,9 @@ a
 {
     display: flex;
     align-items: center;
-    background-color: rgba(29, 29, 27, 0.02);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-
+    background-color: rgba(29, 29, 27, 0.04);
 }
 
 .header__bottom-nav-items
@@ -249,9 +237,6 @@ a
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 16px; */
-    /* padding-left: 24px; */
-    /* gap: 32px; */
 }
 
 .header__bottom-nav-item
@@ -259,8 +244,8 @@ a
     font-size: 14px;
     position: relative;
     padding: 16px;
-
-
+    cursor: pointer;
+    line-height: 100%;
 }
 
 .header__bottom-nav-item-link
@@ -268,16 +253,7 @@ a
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.header__bottom-nav-item:first-child
-{
-    padding-left: 24px;
-}
-
-.header__bottom-nav-item:last-child a
-{
-    color: #E0001B;
+    white-space: nowrap;
 }
 
 .header__bottom-nav-item:last-child::before
@@ -287,8 +263,8 @@ a
     position: absolute;
     height: 32px;
     background-color: rgba(29, 29, 27, 0.04);
-    left: -24px;
-    top: -8px;
+    left: 0;
+    top: 8px;
 }
 
 .header__bottom-nav-item:hover,
@@ -296,3 +272,11 @@ a
 {
     background-color: rgba(29, 29, 27, 0.04);
 }
+
+.header__bottom-nav-item:first-child {padding-left: 24px;}
+
+.header__bottom-nav-item:nth-child(4) {padding-right: 8px;}
+
+.header__bottom-nav-item:last-child a{color: #E0001B;}
+
+.header__bottom-nav-item:last-child {padding-left: 24px;}
