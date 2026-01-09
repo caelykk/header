@@ -70,10 +70,7 @@ a
     position: relative;
 }
 
-.header__top-city-selector
-{
-    cursor: pointer;
-}
+.header__top-city-selector {cursor: pointer;}
 
 .header__top-city-selected
 {
@@ -274,18 +271,18 @@ a
     background-color: rgba(29, 29, 27, 0.04);
 }
 
-.header__bottom-nav-school-prod {padding-left: 24px;}
-
 .header__bottom-nav-paper-prod-link {
     padding-left: 24px;
     padding-right: 8px;
 }
 
+.header__bottom-nav-school-prod {padding-left: 24px;}
+
 .header__bottom-nav-trade-prod {padding-right: 8px;}
 
-.header__bottom-nav-item:last-child a{
+.header__bottom-nav-sales-link {padding-left: 24px;}
+
+.header__bottom-nav-sales-link {
     color: #E0001B;
     font-weight: 600;
 }
-
-.header__bottom-nav-sales-link {padding-left: 24px;}
