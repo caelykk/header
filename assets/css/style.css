@@ -26,7 +26,7 @@ a
 
 .container
 {
-    max-width: 1100px;
+    max-width: 1120px;
     margin: 0 auto;
     width: 100%;
 }
@@ -167,7 +167,6 @@ a
 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -197,7 +196,8 @@ a
     font-size: 12px;
 }
 
-.header__middle-nav-btn:hover
+.header__middle-nav-btn:hover,
+.header__middle-nav-btn:focus
 {
     background-color: RGBA(29, 29, 27, 0.04);
     border-radius: 3px;
@@ -215,6 +215,7 @@ a
     align-items: center;
     color: #ffffff;
     padding: 16px;
+    padding-right: 24px;
     font-size: 16px;
     font-weight: 600;
     line-height: 100%;
@@ -241,15 +242,15 @@ a
 
 .header__bottom-nav-item
 {
-    font-size: 14px;
     position: relative;
-    padding: 16px;
     cursor: pointer;
-    line-height: 100%;
 }
 
 .header__bottom-nav-item-link
 {
+    font-size: 14px;
+    line-height: 100%;
+    padding: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -267,16 +268,24 @@ a
     top: 8px;
 }
 
-.header__bottom-nav-item:hover,
-.header__bottom-nav-item:focus
+.header__bottom-nav-item-link:hover,
+.header__bottom-nav-item-link:focus
 {
     background-color: rgba(29, 29, 27, 0.04);
 }
 
-.header__bottom-nav-item:first-child {padding-left: 24px;}
+.header__bottom-nav-school-prod {padding-left: 24px;}
 
-.header__bottom-nav-item:nth-child(4) {padding-right: 8px;}
+.header__bottom-nav-paper-prod-link {
+    padding-left: 24px;
+    padding-right: 8px;
+}
 
-.header__bottom-nav-item:last-child a{color: #E0001B;}
+.header__bottom-nav-trade-prod {padding-right: 8px;}
 
-.header__bottom-nav-item:last-child {padding-left: 24px;}
+.header__bottom-nav-item:last-child a{
+    color: #E0001B;
+    font-weight: 600;
+}
+
+.header__bottom-nav-sales-link {padding-left: 24px;}
