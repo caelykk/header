@@ -1,1 +1,1 @@
-import './fetch.js'
+import './formdata.js'
