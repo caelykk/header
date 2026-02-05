@@ -1,1 +1,1 @@
-import './myscript.js'
+import './formdata.js'

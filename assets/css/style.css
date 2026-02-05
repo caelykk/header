@@ -15,6 +15,7 @@ body
     font-weight: 400;
     font-size: 12px;
     font-style: normal;
+    background-color: #E5E5E5;
 }
 
 a
@@ -37,6 +38,11 @@ a
 {
     border-radius: 3px;
     background-color: #E0001B;
+}
+
+.header
+{
+    background-color: #fff;
 }
 
 .header-wr
@@ -201,6 +207,11 @@ a
 {
     background-color: RGBA(29, 29, 27, 0.04);
     border-radius: 3px;
+}
+
+.header__bottom
+{
+    margin-bottom: 30px;
 }
 
 .header__bottom-wr

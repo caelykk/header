@@ -205,14 +205,14 @@
 
   <script type="module" src="./assets/js/main.js"></script>
 
-  <main>
+  <!-- <main>
     <form id="formElem">
       <input type="text" name="name" value="Marat">
       <input type="text" name="surname" value="Tsalikov">
       <input type="text" name="age" value="33">
       <input type="submit">
     </form>
-  </main>
+  </main> -->
 </body>
 </html>
 
