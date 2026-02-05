@@ -203,3 +203,24 @@
     color: #1C294D;
 
 }
+
+.cabinet-profile-form
+{
+    max-width: 420px;
+}
+
+.cabinet-profile-form-item
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-form-phones
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+

@@ -6,16 +6,14 @@ export async function pageLoader() {
 
     let url = `./api.php`;
 
-    const formdata = document.querySelector('#formdata');
+    const formdata = document.forms[0];
 
     formdata.addEventListener('submit', async e => {
         e.preventDefault();
 
-        let formdata = new FormData(formdata);
-
         let response = await fetch(url, {
             method: "POST",
-            body: formdata
+            body: new FormData(formdata)
         });
 
         const result = await response.json();

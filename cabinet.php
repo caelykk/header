@@ -98,58 +98,58 @@
               <form action="./api.php" id="formdata" class="cabinet-profile-form">
 
                 <!-- Email -->
-                <div class="cabinet-profile-form-email">
+                <div class="cabinet-profile-form-item profile-form-email">
                   <label for="email" class="cabinet-profile-form-email--label">Email</label>
                     <input type="email" name="email" id="email" class="cabinet-profile-form-email--input">
                     <small class="cabinet-profile-form-email--error"></small>
                 </div>
 
                 <!-- Телефоны -->
-                <div class="cabinet-profile-form-phones">
+                <div class="cabinet-profile-form-item profile-form-phones">
                   <!-- Основной телефон -->
                   <div class="cabinet-profile-form-phone1">
                     <label for="phone" class="cabinet-profile-form-phone1--label">Номер телефона</label>
-                      <input type="text" id="phone" name="phone" class="cabinet-profile-form-phone1--input">
+                      <input type="text" id="phone" name="phone" class="cabinet-profile-form-phone1--input profile-form-input">
                       <small class="cabinet-profile-form-phone1--error"></small>
                   </div>
                   <!-- Дополнительный телефон -->
                   <div class="cabinet-profile-form-phone2">
                     <label for="phoneAdd" class="cabinet-profile-form-phone2--label">Дополнительный номер</label>
-                      <input type="text" id="phone" name="phone" class="cabinet-profile-form-phone2--input">
+                      <input type="text" id="phoneAdd" name="phoneAdd" class="cabinet-profile-form-phone2--input profile-form-input">
                       <small class="cabinet-profile-form-phone2--error"></small>
                   </div>
                 </div>
 
                 <!-- Фамилия -->
-                <div class="cabinet-profile-form-lastName">
+                <div class="cabinet-profile-form-item">
                   <label for="lastName" class="cabinet-profile-form-lastName--label">Фамилия</label>
                     <input type="text" id="lastName" name="lastName" class="cabinet-profile-form-lastName--input">
                     <small class="cabinet-profile-form-lastName--error"></small>
                 </div>
 
                 <!-- Имя -->
-                <div class="cabinet-profile-form-name">
+                <div class="cabinet-profile-form-item">
                   <label for="name" class="cabinet-profile-form-name--label">Имя</label>
                     <input type="text" id="name" name="name" class="cabinet-profile-form-name--input">
                     <small class="cabinet-profile-form-name--error"></small>
                 </div>
 
                 <!-- Отчество -->
-                <div class="cabinet-profile-form-secondName">
+                <div class="cabinet-profile-form-item">
                   <label for="secondName" class="cabinet-profile-form-secondName--label">Отчество</label>
                     <input type="text" id="secondName" name="secondName" class="cabinet-profile-form-secondName--input">
                     <small class="cabinet-profile-form-secondName--error"></small>
                 </div>
 
                 <!-- Дата рождения -->
-                <div class="cabinet-profile-form-birthday">
+                <div class="cabinet-profile-form-item">
                   <label for="birthday" class="cabinet-profile-form-birthday--label">Дата рождения</label>
                     <input type="text" id="birthday" name="birthday" class="cabinet-profile-form-birthday--input">
                     <small class="cabinet-profile-form-birthday--error"></small>
                 </div>
 
                 <!-- Пол -->
-                <div class="cabinet-profile-form-gender">
+                <div class="cabinet-profile-form-item">
                   <label for="gender" class="cabinet-profile-form-gender--label">Пол</label>
                     <input type="text" id="gender" name="gender" class="cabinet-profile-form-gender--input">
                     <small class="cabinet-profile-form-gender--error"></small>

@@ -30,18 +30,18 @@ export function pageLoader() {
     */
 
     // 1. Создаём новый XMLHttpRequest-объект
-    let xhr = new XMLHttpRequest(); // у конструктора нет аргументов
+    // let xhr = new XMLHttpRequest(); // у конструктора нет аргументов
 
     /**
      * Чтобы добавить к URL параметры, вида ?name=value,
      * и корректно закодировать их,
      * можно использовать объект URL:
      */
-    let url = new URL('https://google.com/search');
-    url.searchParams.set('q', 'test me!');
+    // let url = new URL('https://google.com/search');
+    // url.searchParams.set('q', 'test me!');
 
     // 2. Настраиваем его: GET-запрос по URL /article/.../load
-    xhr.open(method, URL, /*[async, user, password]*/)
+    // xhr.open(method, URL, /*[async, user, password]*/)
 
     // Тип ответа
     // xhr.responseType = ''; // (по умолчанию) – строка
@@ -49,7 +49,7 @@ export function pageLoader() {
     // xhr.responseType = 'arraybuffer'; // ArrayBuffer (для бинарных данных)
     // xhr.responseType = 'blob'; // Blob (для бинарных данных)
     // xhr.responseType = 'document'; // XML-документ (может использовать XPath и другие XML-методы)
-    xhr.responseType = 'json'; // JSON (парсится автоматически)
+    // xhr.responseType = 'json'; // JSON (парсится автоматически)
 
     // Состояния запроса
     // xhr.readyState
@@ -65,45 +65,54 @@ export function pageLoader() {
     // getAllResponseHeaders() //
 
     // 3. Этот метод устанавливает соединение и отсылает запрос к серверу.
-    xhr.send(/*[body]*/)
+    // xhr.send(/*[body]*/)
 
     // Отмена запроса
     // xhr.abort();
 
     // 4. Этот код сработает после того, как мы получим ответ сервера
-    xhr.onload = function() {
-        if (xhr.status != 200) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
-            alert(`Ошибка ${xhr.status}: ${xhr.statusText}`); // Например, 404: Not Found
-        } else { // если всё прошло гладко, выводим результат
-            alert(`Готово, получили ${xhr.response.length} байт`); // response -- это ответ сервера
-        }
-    };
+    // xhr.onload = function() {
+    //     if (xhr.status != 200) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
+    //         alert(`Ошибка ${xhr.status}: ${xhr.statusText}`); // Например, 404: Not Found
+    //     } else { // если всё прошло гладко, выводим результат
+    //         alert(`Готово, получили ${xhr.response.length} байт`); // response -- это ответ сервера
+    //     }
+    // };
 
-    xhr.onprogress = function(event) {
-        if (event.lengthComputable) {
-            alert(`Получено ${event.loaded} из ${event.total} байт`);
+    // xhr.onprogress = function(event) {
+    //     if (event.lengthComputable) {
+    //         alert(`Получено ${event.loaded} из ${event.total} байт`);
+    //     } else {
+    //         alert(`Получено ${event.loaded} байт`); // если в ответе нет заголовка Content-Length
+    //     }
+    // };
+
+    // xhr.onerror = function() {
+    // alert("Запрос не удался");
+    // };
+
+
+    let url = './api.phpsad';
+
+    // Заполним FormData данными из формы
+    let formData = new FormData(document.forms[0]);
+
+    // отправим данные
+    let xhr = new XMLHttpRequest();
+
+
+    xhr.open("POST", url);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    xhr.send(formData);
+
+    xhr.onload = (e) => {
+        if(xhr.readyState !== 4 && xhr.status !== 200) {
+            throw e;
         } else {
-            alert(`Получено ${event.loaded} байт`); // если в ответе нет заголовка Content-Length
+            console.log("GOOD");
         }
     };
 
-    xhr.onerror = function() {
-    alert("Запрос не удался");
-    };
-
-    /**
-        // Заполним FormData данными из формы
-        let formData = new FormData(document.forms.person);
-
-        // добавим ещё одно поле
-        formData.append("middle", "Иванович");
-
-        // отправим данные
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "/article/xmlhttprequest/post/user");
-        xhr.send(formData);
-
-        xhr.onload = () => alert(xhr.response);
-     */
 
 }
