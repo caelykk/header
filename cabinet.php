@@ -95,12 +95,12 @@
               </nav>
 
               <!-- Форма профиля -->
-              <form action="" class="cabinet-profile-form">
+              <form action="./api.php" id="formdata" class="cabinet-profile-form">
 
                 <!-- Email -->
                 <div class="cabinet-profile-form-email">
-                  <label class="cabinet-profile-form-email--label">Email</label>
-                    <input type="text" class="cabinet-profile-form-email--input">
+                  <label for="email" class="cabinet-profile-form-email--label">Email</label>
+                    <input type="email" name="email" id="email" class="cabinet-profile-form-email--input">
                     <small class="cabinet-profile-form-email--error"></small>
                 </div>
 
@@ -108,57 +108,63 @@
                 <div class="cabinet-profile-form-phones">
                   <!-- Основной телефон -->
                   <div class="cabinet-profile-form-phone1">
-                    <label class="cabinet-profile-form-phone1--label">Номер телефона</label>
-                      <input type="text" class="cabinet-profile-form-phone1--input">
+                    <label for="phone" class="cabinet-profile-form-phone1--label">Номер телефона</label>
+                      <input type="text" id="phone" name="phone" class="cabinet-profile-form-phone1--input">
                       <small class="cabinet-profile-form-phone1--error"></small>
                   </div>
                   <!-- Дополнительный телефон -->
                   <div class="cabinet-profile-form-phone2">
-                    <label class="cabinet-profile-form-phone2--label">Дополнительный номер</label>
-                      <input type="text" class="cabinet-profile-form-phone2--input">
+                    <label for="phoneAdd" class="cabinet-profile-form-phone2--label">Дополнительный номер</label>
+                      <input type="text" id="phone" name="phone" class="cabinet-profile-form-phone2--input">
                       <small class="cabinet-profile-form-phone2--error"></small>
                   </div>
                 </div>
 
                 <!-- Фамилия -->
                 <div class="cabinet-profile-form-lastName">
-                  <label class="cabinet-profile-form-lastName--label">Фамилия</label>
-                    <input type="text" class="cabinet-profile-form-lastName--input">
+                  <label for="lastName" class="cabinet-profile-form-lastName--label">Фамилия</label>
+                    <input type="text" id="lastName" name="lastName" class="cabinet-profile-form-lastName--input">
                     <small class="cabinet-profile-form-lastName--error"></small>
                 </div>
 
                 <!-- Имя -->
                 <div class="cabinet-profile-form-name">
-                  <label class="cabinet-profile-form-name--label">Имя</label>
-                    <input type="text" class="cabinet-profile-form-name--input">
+                  <label for="name" class="cabinet-profile-form-name--label">Имя</label>
+                    <input type="text" id="name" name="name" class="cabinet-profile-form-name--input">
                     <small class="cabinet-profile-form-name--error"></small>
                 </div>
 
                 <!-- Отчество -->
                 <div class="cabinet-profile-form-secondName">
-                  <label class="cabinet-profile-form-secondName--label">Отчество</label>
-                    <input type="text" class="cabinet-profile-form-secondName--input">
+                  <label for="secondName" class="cabinet-profile-form-secondName--label">Отчество</label>
+                    <input type="text" id="secondName" name="secondName" class="cabinet-profile-form-secondName--input">
                     <small class="cabinet-profile-form-secondName--error"></small>
                 </div>
 
                 <!-- Дата рождения -->
                 <div class="cabinet-profile-form-birthday">
-                  <label class="cabinet-profile-form-birthday--label">Дата рождения</label>
-                    <input type="text" class="cabinet-profile-form-birthday--input">
+                  <label for="birthday" class="cabinet-profile-form-birthday--label">Дата рождения</label>
+                    <input type="text" id="birthday" name="birthday" class="cabinet-profile-form-birthday--input">
                     <small class="cabinet-profile-form-birthday--error"></small>
                 </div>
 
                 <!-- Пол -->
                 <div class="cabinet-profile-form-gender">
-                  <label class="cabinet-profile-form-gender--label">Пол</label>
-                    <input type="text" class="cabinet-profile-form-gender--input">
+                  <label for="gender" class="cabinet-profile-form-gender--label">Пол</label>
+                    <input type="text" id="gender" name="gender" class="cabinet-profile-form-gender--input">
                     <small class="cabinet-profile-form-gender--error"></small>
                 </div>
+
+                <!-- Кнопка "Сохранить" -->
+                <button type="submit" id="saveBtn" name="saveBtn" class="g-button g-button--red cabinet-profile-form-saveBtn">
+                Сохранить изменения
+                </button>
               </form>
             </section>
           </div>
         </div>
       </div>
     </main>
+    <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>

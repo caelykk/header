@@ -3,22 +3,24 @@ document.addEventListener('DOMContentLoaded', pageLoader)
 // При использовании async/await добавить async перед function(или после export)
 export async function pageLoader() {
 
-    let url = `https://api.github.com/repos/caelykk/header/commits`;
+    let url = `./api.php`;
 
-    /** Запрос на сервер с помощью async/await
-     * let response = await fetch(url);
-     * let commits = await response.json(); // читаем ответ в формате JSON
-     * console.log(commits[0]);
-    */
+    const formdata = document.querySelector('#formdata');
 
-    // console.log(users);
+    console.log(formdata);
 
-    fetch(url)
-        .then(response => {
-            console.log("response: ", response);
-            console.log("response.headers: ", response.headers);
-            return response.json()
+    formdata.addEventListener('submit', e => {
+        e.preventDefault();
+        console.log(formdata);
+
+        let data = new Map();
+
+        fetch(url, {
+            method: "POST",
+            body: new FormData(formdata)
         })
-        .then(commits => console.log(commits[0].author.login))
-        .catch(error => console.log(error))
+            .then(response => response.json())
+            .then(result => console.log(result))
+            .catch(error => console.log(error))
+    });
 }
